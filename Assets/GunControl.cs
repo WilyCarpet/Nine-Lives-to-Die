@@ -1,9 +1,12 @@
+using UnityEditor;
 using UnityEngine;
 
 public class GunRotation : MonoBehaviour
 {
     public Camera mainCamera; // Assign your main camera in the Inspector.
     public GameObject gunObject; // Assign your gun GameObject in the Inspector.
+
+    public GameObject bullet;
 
     void Start()
     {
@@ -27,5 +30,16 @@ public class GunRotation : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             gunObject.transform.rotation = Quaternion.Euler(0, 0, angle);
         }
+
+         if (Input.GetKeyDown("space"))
+        {
+            GunShoot();
+        }
+    }
+
+    void GunShoot()
+    {
+        Debug.Log("Shoot Gun");
+        Instantiate(bullet, transform.position, transform.rotation);
     }
 }
