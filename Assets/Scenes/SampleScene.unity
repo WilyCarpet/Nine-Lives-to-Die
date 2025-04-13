@@ -1483,7 +1483,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8618700129689782155, guid: ccd3b9a2de1c6c845b8173398cd641a3, type: 3}
->>>>>>> Stashed changes
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
