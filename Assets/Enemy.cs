@@ -1,7 +1,8 @@
 using System.Collections.Generic;   
 using System.Collections;   
 using UnityEngine;
-using System.Runtime.CompilerServices; 
+using System.Runtime.CompilerServices;
+
 
 
 public class Enemy : MonoBehaviour
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float rotationSpeed = 0.0025f;
     private Rigidbody2D rb;
     public Transform target;
+
 
     private void Start()
     {
@@ -42,11 +44,16 @@ public class Enemy : MonoBehaviour
         transform.localRotation = Quaternion.Slerp(transform.localRotation, q, rotationSpeed);
     }
 
-    private void GetTarget(){
-        if(GameObject.FindGameObjectWithTag("Player")){
-            target = GameObject.FindGameObjectWithTag("Player").transform; 
-        }
+    private void GetTarget()
+{
+    // Find the GameObject with the "Player" tag
+    GameObject player = GameObject.FindGameObjectWithTag("Player");
+    if (player != null)
+    {
+        // Assign the player's Transform as the target
+        target = player.transform;
     }
+}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

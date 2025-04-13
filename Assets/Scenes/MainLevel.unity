@@ -2188,6 +2188,10 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8768124508875715874, guid: 51ce64433474e944fa64070352965db2, type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2351,6 +2355,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 127414a90c58708418fbfeeef4d32acc, type: 2}
+    - target: {fileID: 2809099641827429510, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 8410631623583386733, guid: ba3df73216171874f8bc0c71263712b0, type: 3}
     - target: {fileID: 4152129197426541618, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2393,6 +2401,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490782203596595727, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490782203596595727, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
