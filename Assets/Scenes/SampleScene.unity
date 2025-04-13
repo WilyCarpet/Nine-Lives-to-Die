@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 320473204}
   - component: {fileID: 320473203}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 320473205}
   - component: {fileID: 320473204}
   - component: {fileID: 320473203}
@@ -360,6 +361,11 @@ GameObject:
   - component: {fileID: 320473204}
   
 >>>>>>> parent of d98296a (commit)
+=======
+  - component: {fileID: 320473205}
+  - component: {fileID: 320473204}
+  - component: {fileID: 320473203}
+>>>>>>> parent of 98f4b9a (commit)
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
