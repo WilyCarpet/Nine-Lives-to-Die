@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 320473203}
 =======
   
+  - component: {fileID: 320473204}
   
 >>>>>>> parent of d98296a (commit)
   m_Layer: 0
