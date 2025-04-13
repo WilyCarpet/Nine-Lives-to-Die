@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 320473204}
   - component: {fileID: 320473203}
   
-  - component: {fileID: 320473204}
+  
   
   m_Layer: 0
   m_Name: EventSystem
