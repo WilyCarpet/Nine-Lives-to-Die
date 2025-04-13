@@ -339,11 +339,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
 --- !u!1 &320473202
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,10 +684,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,12 +902,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
 
->>>>>>> Stashed changes
 --- !u!1 &1288150188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,10 +1016,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288150188}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &1470217167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,8 +1429,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     - target: {fileID: 2809099641827429510, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
       propertyPath: bullet
       value: 
@@ -1494,9 +1474,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7490782203596595727, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
-=======
-=======
->>>>>>> Stashed changes
     - target: {fileID: 907115753016316536, guid: 8815a160701bdcc47a340e33f3fe746d, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -1753,10 +1730,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8618700129689782155, guid: ccd3b9a2de1c6c845b8173398cd641a3, type: 3}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
@@ -1764,15 +1737,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: 4505f2432dd589149a581d44edab30f6, type: 3}
-=======
   m_SourcePrefab: {fileID: 100100000, guid: ccd3b9a2de1c6c845b8173398cd641a3, type: 3}
->>>>>>> Stashed changes
-=======
+
   m_SourcePrefab: {fileID: 100100000, guid: ccd3b9a2de1c6c845b8173398cd641a3, type: 3}
->>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2321,15 +2289,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 217032689}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
-
->>>>>>> Stashed changes
-=======
   - {fileID: 4722109839324149618}
->>>>>>> Stashed changes
   - {fileID: 1470217170}
   - {fileID: 186424259}
   - {fileID: 711876053}
