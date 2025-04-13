@@ -356,9 +356,9 @@ GameObject:
   - component: {fileID: 320473205}
   - component: {fileID: 320473204}
   - component: {fileID: 320473203}
-  - component: {fileID: 320473205}
+  
   - component: {fileID: 320473204}
-  - component: {fileID: 320473203}
+  
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -368,7 +368,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &320473203
+
 --- !u!114 &320473203
 MonoBehaviour:
   m_ObjectHideFlags: 0
