@@ -8,13 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
-  - component: {fileID: 3849213151428491463}
-  - component: {fileID: 5598979533784610479}
-  m_Layer: 0
-  m_Name: Graphic
-  m_TagString: Untagged
-=======
   - component: {fileID: 5758833668296803215}
   - component: {fileID: 4335846770102198606}
   - component: {fileID: 5831514598181349960}
@@ -24,7 +17,6 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
->>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,11 +153,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-<<<<<<< Updated upstream
   m_Constraints: 0
-=======
-  m_Constraints: 4
->>>>>>> Stashed changes
 --- !u!114 &7758899049265809873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,17 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796898625bda2eb42a7adc0d2defbcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   moveSpeed: 1
   rotationSpeed: 0.025
   target: {fileID: 0}
-=======
-  moveSpeed: 2
-  rotationSpeed: 0.025
-  target: {fileID: 0}
-  scoreValue: 10
-  scoreManager: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!114 &1278055307326638584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,11 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-<<<<<<< Updated upstream
 --- !u!58 &-1910197609017670079
-=======
---- !u!58 &1574816608210012688
->>>>>>> Stashed changes
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
