@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public Transform target;
 
 
-    private void Start()
+    private void Awake()
     {
        rb = GetComponent<Rigidbody2D>();
 
