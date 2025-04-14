@@ -216,14 +216,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-<<<<<<< Updated upstream
   m_Offset: {x: 0, y: 0}
-<<<<<<< Updated upstream
   m_Radius: 0.5
-=======
   m_Offset: {x: 0, y: 0.14499998}
   m_Radius: 0.15
->>>>>>> Stashed changes
-=======
   m_Radius: 0.1
->>>>>>> Stashed changes
