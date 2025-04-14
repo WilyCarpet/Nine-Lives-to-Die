@@ -6,15 +6,16 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
 
-    public Camera mainCamera;
+    private Camera mainCamera;
     private Vector3 mousePos;
     private Rigidbody2D rb;
     public float force;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mainCamera = Camera.main;
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
+        mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
         rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
