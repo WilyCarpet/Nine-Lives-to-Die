@@ -7,10 +7,4 @@ public class BulletScript : MonoBehaviour
         // Destroy the bullet when it collides with anything.
         Destroy(gameObject);
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        //Destroy the bullet when it collides with a trigger.
-        Destroy(gameObject);
-    }
 }

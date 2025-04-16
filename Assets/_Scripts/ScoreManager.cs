@@ -19,4 +19,10 @@ public class ScoreManager : MonoBehaviour
         score += points;
         OnScoreChanged?.Invoke(score); // Notify listeners
     }
+
+    public void DecresaeScore(int points)
+    {
+        score -= points;
+        OnScoreChanged?.Invoke(score); // Notify listeners
+    }
 }
