@@ -14,7 +14,7 @@ public class BulletScript : MonoBehaviour
 
             healthController.TakeDamage(damageAmount);
         }
-        
+        Destroy(gameObject);
             
     }
 }
