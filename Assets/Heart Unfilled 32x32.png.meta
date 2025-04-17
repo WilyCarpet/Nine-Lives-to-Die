@@ -134,6 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       Heart Unfilled 32x32_0: -5384570586076251886
   mipmapLimitGroupName: 
@@ -277,6 +278,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+=======
+>>>>>>> Stashed changes
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

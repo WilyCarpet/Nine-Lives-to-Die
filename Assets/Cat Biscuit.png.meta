@@ -134,6 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       Cat Biscuit_0: 1678216008410793820
   mipmapLimitGroupName: 
@@ -277,6 +278,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+=======
+>>>>>>> Stashed changes
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -134,6 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       Litter Box_0: 9121785686760554530
   mipmapLimitGroupName: 
@@ -277,6 +278,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+=======
+>>>>>>> Stashed changes
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

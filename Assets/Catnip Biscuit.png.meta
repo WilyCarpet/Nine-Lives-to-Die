@@ -134,6 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       Catnip Biscuit_0: 377248774130598918
   mipmapLimitGroupName: 
@@ -277,6 +278,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+=======
+>>>>>>> Stashed changes
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
