@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class GunControl : MonoBehaviour
@@ -7,6 +8,11 @@ public class GunControl : MonoBehaviour
     public Transform firePoint; // Assign the Fire Point Transform in the Inspector.
     public GameObject bulletPrefab; // Assign your bullet prefab in the Inspector.
     public float bulletSpeed = 25f; // Adjust bullet speed as needed.
+    public int ammoCount = 6;
+    public int maxAmmoCount = 6;
+    public TextMeshProUGUI ammoUI; // Assign your TextMeshProUGUI element in the Inspector.
+    public float fireRate = 2f; // Shots per second (2 shots per second = 0.5 second delay)
+    private float nextFireTime = 0f;
 
     void Start()
     {
@@ -29,6 +35,9 @@ public class GunControl : MonoBehaviour
         {
             Debug.LogError("Bullet Prefab is not assigned in the Inspector!");
         }
+
+        // Initialize the UI text at the start
+        UpdateAmmoUI();
     }
 
     void Update()
@@ -51,38 +60,80 @@ public class GunControl : MonoBehaviour
         }
 
         // Handle shooting input
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && Time.time >= nextFireTime) // Check if mouse button is held AND if enough time has passed
         {
             Shoot();
+            nextFireTime = Time.time + (1f / fireRate); // Calculate the next allowed fire time
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
         }
     }
 
     void Shoot()
     {
-        if (bulletPrefab != null && firePoint != null)
+        // Check if there is ammo
+        if (ammoCount > 0)
         {
-            // Instantiate the bullet at the fire point's position and rotation
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-            // Get the Rigidbody2D component of the bullet
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
-            if (rb != null)
+            if (bulletPrefab != null && firePoint != null)
             {
-                // Apply velocity to the bullet in the forward direction of the fire point
-                rb.linearVelocity = firePoint.right * bulletSpeed;
+                // Instantiate the bullet at the fire point's position and rotation
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-                // Optionally, you can destroy the bullet after some time
-                // Destroy(bullet, 2f);
+                // Get the Rigidbody2D component of the bullet
+                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+                if (rb != null)
+                {
+                    // Apply velocity to the bullet in the forward direction of the fire point
+                    rb.linearVelocity = firePoint.right * bulletSpeed;
+
+                    // Optionally, you can destroy the bullet after some time
+                    // Destroy(bullet, 2f);
+
+                    // Decrease the ammo count
+                    ammoCount--;
+                    UpdateAmmoUI(); // Update the UI after shooting
+                }
+                else
+                {
+                    Debug.LogError("Bullet prefab does not have a Rigidbody2D component.");
+                }
             }
             else
             {
-                Debug.LogError("Bullet prefab does not have a Rigidbody2D component.");
+                Debug.LogError("Bullet prefab or firePoint not assigned!");
             }
         }
         else
         {
-            Debug.LogError("Bullet prefab or firePoint not assigned!");
+            Debug.Log("Out of ammo!"); // Optional: Indicate that the gun is out of ammo
+            // You could also play a "click" sound or some other feedback here.
+            UpdateAmmoUI(); // Update the UI even when out of ammo (shows 0/max)
+        }
+    }
+
+    void Reload()
+    {
+        // Set the ammo count back to the maximum
+        ammoCount = maxAmmoCount;
+        UpdateAmmoUI(); // Update the UI after reloading
+        Debug.Log("Reloaded! Ammo: " + ammoCount); // Optional: Display ammo after reload
+        // You could also play a reload sound or animation here.
+    }
+
+    // Dedicated function to update the ammo UI text
+    void UpdateAmmoUI()
+    {
+        if (ammoUI != null)
+        {
+            ammoUI.text = "Pistol: " + ammoCount + "/" + maxAmmoCount;
+        }
+        else
+        {
+            Debug.LogError("Ammo UI TextMeshProUGUI element is not assigned in the Inspector!");
         }
     }
 }
