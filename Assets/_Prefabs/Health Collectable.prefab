@@ -64,6 +64,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6673418744071587566, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673418744071587566, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6799227913752843450, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
       propertyPath: m_Name
       value: Health Collectable
