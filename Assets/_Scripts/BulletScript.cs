@@ -13,9 +13,8 @@ public class BulletScript : MonoBehaviour
 
             healthController.TakeDamage(damageAmount);
 
-            Destroy(gameObject); // Destroy the bullet after it hits the enemy
-
         }
+        Destroy(gameObject); // Destory the Gameobject after colliding with anything
             
     }
 }
