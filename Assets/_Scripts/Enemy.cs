@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
             {
                 scoreManager.IncreaseScore(scoreValue);
             }
-            
+
             Destroy(gameObject);
         }
     }

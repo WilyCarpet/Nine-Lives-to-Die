@@ -14,8 +14,9 @@ public class Collectible : MonoBehaviour
         var player = collision.GetComponent<PlayerController>();
 
         if(player != null){
-            
+
             collectibleInterface.OnCollect(player.gameObject); // Call the OnCollect method on the collectible interface
+            
             Destroy(gameObject); // Destroy the collectible object
         }
     }
