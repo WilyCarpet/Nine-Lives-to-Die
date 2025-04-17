@@ -1943,7 +1943,6 @@ PrefabInstance:
 --- !u!1001 &1025330467
 PrefabInstance:
   m_ObjectHideFlags: 0
-<<<<<<< Updated upstream
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2086,7 +2085,6 @@ MonoBehaviour:
   costText: {fileID: 1569932358}
   doorCost: 50
   playerTag: Player
-=======
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -2188,7 +2186,6 @@ MonoBehaviour:
       addedObject: {fileID: 918604911}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db2eea77175e9749ba9cf59547c9712, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &1119946915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,7 +3110,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51ce64433474e944fa64070352965db2, type: 3}
-<<<<<<< Updated upstream
 --- !u!1 &1569932356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,8 +3323,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &1578200386
 GameObject:
   m_ObjectHideFlags: 0
