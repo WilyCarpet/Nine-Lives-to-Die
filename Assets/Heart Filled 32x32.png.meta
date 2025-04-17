@@ -135,6 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     nameFileIdTable:
       Heart Filled 32x32_0: -3996059502249073439
   mipmapLimitGroupName: 
@@ -278,6 +279,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     nameFileIdTable: {}
