@@ -24,9 +24,21 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.02306813
       objectReference: {fileID: 0}
+    - target: {fileID: 5789093628261325884, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592626928528267325, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592626928528267325, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6592626928528267325, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.98
       objectReference: {fileID: 0}
     - target: {fileID: 6592626928528267325, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6592626928528267325, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6592626928528267325, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -76,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Collectable
       objectReference: {fileID: 0}
+    - target: {fileID: 6799227913752843450, guid: 502c85a3a2cf9f54cbe91286e09302c9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -101,3 +117,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e38ffc7f2338fe48a98bb16939f1ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthAmount: 5
