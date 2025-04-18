@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class GunControl : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class GunControl : MonoBehaviour
     public Transform bodyTransform; // Assign the Body Transform in the Inspector.
     public Transform firePoint; // Assign the Fire Point Transform in the Inspector.
     public GameObject bulletPrefab; // Assign your bullet prefab in the Inspector.
+    public SpriteRenderer muzzleFlash;
     public float bulletSpeed = 25f; // Adjust bullet speed as needed.
     public int ammoCount = 6;
     public int maxAmmoCount = 6;
@@ -38,6 +40,7 @@ public class GunControl : MonoBehaviour
 
         // Initialize the UI text at the start
         UpdateAmmoUI();
+        muzzleFlash.enabled = false;
     }
 
     void Update()
@@ -79,6 +82,7 @@ public class GunControl : MonoBehaviour
         {
             if (bulletPrefab != null && firePoint != null)
             {
+                Flash();
                 // Instantiate the bullet at the fire point's position and rotation
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
@@ -135,5 +139,17 @@ public class GunControl : MonoBehaviour
         {
             Debug.LogError("Ammo UI TextMeshProUGUI element is not assigned in the Inspector!");
         }
+    }
+
+    public void Flash()
+    {
+        StartCoroutine(DoMuzzleFlash());
+    }
+
+    private IEnumerator DoMuzzleFlash()
+    {
+        muzzleFlash.enabled = true;
+        yield return new WaitForSeconds(0.1f); // Wait for 0.5 seconds
+        muzzleFlash.enabled = false;
     }
 }
