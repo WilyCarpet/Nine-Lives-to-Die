@@ -149,7 +149,7 @@ public class GunControl : MonoBehaviour
     private IEnumerator DoMuzzleFlash()
     {
         muzzleFlash.enabled = true;
-        yield return new WaitForSeconds(0.1f); // Wait for 0.5 seconds
+        yield return new WaitForSeconds(0.05f); // Wait for 0.5 seconds
         muzzleFlash.enabled = false;
     }
 }
