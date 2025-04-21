@@ -18,6 +18,7 @@ public class BulletScript : MonoBehaviour
              // Destroy the bullet after it hits the enemy
 
         }
+        Destroy(gameObject); // Destory the Gameobject after colliding with anything
             
     }
 }

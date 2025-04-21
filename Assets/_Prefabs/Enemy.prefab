@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796898625bda2eb42a7adc0d2defbcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 8
   rotationSpeed: 0.025
   target: {fileID: 0}
   scoreValue: 10
@@ -183,7 +183,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.15}
   m_Radius: 0.15
 --- !u!114 &7630746581427213030
 MonoBehaviour:
