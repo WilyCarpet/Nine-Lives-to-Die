@@ -55,13 +55,14 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            Destroy(gameObject);
             // Check if scoreManager is assigned before using it.
             if (scoreManager != null)
             {
                 scoreManager.IncreaseScore(scoreValue);
             }
 
-            Destroy(gameObject);
+            
         }
     }
 }

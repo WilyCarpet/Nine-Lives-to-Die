@@ -9,11 +9,13 @@ public class BulletScript : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            Destroy(gameObject);
+            
             var healthController = collision.gameObject.GetComponent<HealthController>();
 
             healthController.TakeDamage(damageAmount);
 
-            Destroy(gameObject); // Destroy the bullet after it hits the enemy
+             // Destroy the bullet after it hits the enemy
 
         }
             
