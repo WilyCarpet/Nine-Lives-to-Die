@@ -17,8 +17,12 @@ public class BulletScript : MonoBehaviour
 
              // Destroy the bullet after it hits the enemy
 
+        } else if(collision.gameObject.CompareTag("Bullet"))
+        {
+
         }
-        Destroy(gameObject); // Destory the Gameobject after colliding with anything
-            
+        else{
+            Destroy(gameObject); // Destory the Gameobject after colliding with anything
+        }
     }
 }

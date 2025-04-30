@@ -57,12 +57,15 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             // Check if scoreManager is assigned before using it.
-            if (scoreManager != null)
-            {
-                scoreManager.IncreaseScore(scoreValue);
-            }
-
             
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (scoreManager != null)
+        {
+            scoreManager.IncreaseScore(scoreValue);
         }
     }
 }

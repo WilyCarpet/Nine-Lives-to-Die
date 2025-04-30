@@ -12,7 +12,9 @@ public class GunControl : MonoBehaviour
     public float bulletSpeed = 25f; // Adjust bullet speed as needed.
     public int ammoCount = 6;
     public int maxAmmoCount = 6;
+    public int ammoInventory = 30;
     public TextMeshProUGUI ammoUI; // Assign your TextMeshProUGUI element in the Inspector.
+    public bool isShotgun;
     public float fireRate = 2f; // Shots per second (2 shots per second = 0.5 second delay)
     private float nextFireTime = 0f;
 
@@ -84,27 +86,54 @@ public class GunControl : MonoBehaviour
             {
                 Flash();
                 // Instantiate the bullet at the fire point's position and rotation
-                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-                // Get the Rigidbody2D component of the bullet
-                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
-                if (rb != null)
+                if (isShotgun)
                 {
-                    // Apply velocity to the bullet in the forward direction of the fire point
-                    rb.linearVelocity = firePoint.right * bulletSpeed;
+                    float[] angles = { -15f, -7.5f, 0f, 7.5f, 15f }; // Spread angles
 
-                    // Optionally, you can destroy the bullet after some time
-                    // Destroy(bullet, 2f);
+                    foreach (float angle in angles)
+                    {
+                        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                        bullet.transform.localScale *= 0.7f; // Reduce bullet size
 
-                    // Decrease the ammo count
+                        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                        if (rb != null)
+                        {
+                            // Rotate bullet and set velocity
+                            bullet.transform.Rotate(0, 0, angle);
+                            rb.linearVelocity = bullet.transform.right * bulletSpeed;
+                        }
+                        else
+                        {
+                            Debug.LogError("Bullet prefab does not have a Rigidbody2D component.");
+                        }
+                    }
                     ammoCount--;
-                    UpdateAmmoUI(); // Update the UI after shooting
+                    UpdateAmmoUI();
                 }
-                else
-                {
-                    Debug.LogError("Bullet prefab does not have a Rigidbody2D component.");
+                else{
+                    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+                    // Get the Rigidbody2D component of the bullet
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+                    if (rb != null)
+                    {
+                        // Apply velocity to the bullet in the forward direction of the fire point
+                        rb.linearVelocity = firePoint.right * bulletSpeed;
+
+                        // Optionally, you can destroy the bullet after some time
+                        // Destroy(bullet, 2f);
+
+                        // Decrease the ammo count
+                        ammoCount--;
+                        UpdateAmmoUI(); // Update the UI after shooting
+                    }
+                    else
+                    {
+                        Debug.LogError("Bullet prefab does not have a Rigidbody2D component.");
+                    }
                 }
+                
             }
             else
             {
@@ -121,11 +150,30 @@ public class GunControl : MonoBehaviour
 
     void Reload()
     {
-        // Set the ammo count back to the maximum
-        ammoCount = maxAmmoCount;
+        // Calculate how much ammo is needed to reach max
+        int ammoNeeded = maxAmmoCount - ammoCount;
+
+        // Check if ammoInventory has enough to fully reload
+        if (ammoInventory >= ammoNeeded)
+        {
+            // Subtract the required amount from inventory and fill up ammoCount
+            ammoInventory -= ammoNeeded;
+            ammoCount = maxAmmoCount;
+        }
+        else
+        {
+            // If not enough ammo, just take what is available
+            ammoCount += ammoInventory;
+            ammoInventory = 0;
+        }
+
         UpdateAmmoUI(); // Update the UI after reloading
-        Debug.Log("Reloaded! Ammo: " + ammoCount); // Optional: Display ammo after reload
-        // You could also play a reload sound or animation here.
+        Debug.Log("Reloaded! Ammo: " + ammoCount + ", Ammo Inventory: " + ammoInventory); 
+    }
+
+    private void OnEnable()
+    {
+        UpdateAmmoUI();
     }
 
     // Dedicated function to update the ammo UI text
@@ -133,7 +181,7 @@ public class GunControl : MonoBehaviour
     {
         if (ammoUI != null)
         {
-            ammoUI.text = "Pistol: " + ammoCount + "/" + maxAmmoCount;
+            ammoUI.text = "Pistol: " + ammoCount + "/" + ammoInventory;
         }
         else
         {
