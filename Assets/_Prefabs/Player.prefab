@@ -693,6 +693,7 @@ MonoBehaviour:
   bulletSpeed: 30
   ammoCount: 25
   maxAmmoCount: 25
+  ammoInventory: 60
   ammoUI: {fileID: 0}
   isShotgun: 0
   fireRate: 10
@@ -782,6 +783,7 @@ MonoBehaviour:
   bulletSpeed: 30
   ammoCount: 2
   maxAmmoCount: 2
+  ammoInventory: 12
   ammoUI: {fileID: 0}
   isShotgun: 1
   fireRate: 5
@@ -800,6 +802,7 @@ GameObject:
   - component: {fileID: 4773474126414852571}
   - component: {fileID: 6862689938975283025}
   - component: {fileID: 325690280314309559}
+  - component: {fileID: 163347732968622578}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -998,6 +1001,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6037b33ff361617468a79c1b8492412a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &163347732968622578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7490782203596595727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50894dde8fb2bd64ca2964273b7f50b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 8327222174820707117}
+  - {fileID: 7405786986913127764}
+  - {fileID: 3815283646478647695}
+  weaponUnlocked: 010101
 --- !u!1 &7710179353936165323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1247,7 @@ MonoBehaviour:
   bulletSpeed: 25
   ammoCount: 6
   maxAmmoCount: 6
+  ammoInventory: 30
   ammoUI: {fileID: 0}
   isShotgun: 0
   fireRate: 3
