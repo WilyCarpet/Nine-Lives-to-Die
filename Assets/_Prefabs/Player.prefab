@@ -279,7 +279,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973996636481541614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -317,7 +317,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.16981131, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.4039216, g: 0.4039216, b: 0.4039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -697,6 +697,7 @@ MonoBehaviour:
   ammoUI: {fileID: 0}
   isShotgun: 0
   fireRate: 10
+  gunName: 'Machinegun:'
 --- !u!1 &4925831042299668573
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +788,7 @@ MonoBehaviour:
   ammoUI: {fileID: 0}
   isShotgun: 1
   fireRate: 5
+  gunName: 'Shotgun: '
 --- !u!1 &7490782203596595727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1019,7 @@ MonoBehaviour:
   - {fileID: 8327222174820707117}
   - {fileID: 7405786986913127764}
   - {fileID: 3815283646478647695}
-  weaponUnlocked: 010101
+  weaponUnlocked: 010000
 --- !u!1 &7710179353936165323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1253,7 @@ MonoBehaviour:
   ammoUI: {fileID: 0}
   isShotgun: 0
   fireRate: 3
+  gunName: 'Pistol: '
 --- !u!1 &8431075495275288065
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,8 @@ public class GunControl : MonoBehaviour
     public int ammoInventory = 30;
     public TextMeshProUGUI ammoUI; // Assign your TextMeshProUGUI element in the Inspector.
     public bool isShotgun;
-    public float fireRate = 2f; // Shots per second (2 shots per second = 0.5 second delay)
+    public float fireRate = 2f; // Shots per second (2 shots per second = 0.5 second delay)'
+    public string gunName = "GunName";
     private float nextFireTime = 0f;
 
     void Start()
@@ -177,11 +178,11 @@ public class GunControl : MonoBehaviour
     }
 
     // Dedicated function to update the ammo UI text
-    void UpdateAmmoUI()
+    public void UpdateAmmoUI()
     {
         if (ammoUI != null)
         {
-            ammoUI.text = "Pistol: " + ammoCount + "/" + ammoInventory;
+            ammoUI.text = gunName + ammoCount + "/" + ammoInventory;
         }
         else
         {
