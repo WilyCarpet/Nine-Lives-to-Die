@@ -62,7 +62,7 @@ public class GunBuy : MonoBehaviour
         {
             if (scoreManager != null && scoreManager.score >= gunCost)
             {
-                scoreManager.DecresaeScore(gunCost);
+                scoreManager.DecreaseScore(gunCost);
                 Debug.Log("Player bought weapon " + weaponIndex + "!");
 
                 // Unlock the weapon in GunInventory

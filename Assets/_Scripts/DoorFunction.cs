@@ -88,7 +88,7 @@ public class DoorFunction : MonoBehaviour
             if (scoreManager != null && scoreManager.score >= doorCost)
             {
                 // Deduct the cost from the player's score.
-                scoreManager.DecresaeScore(doorCost);
+                scoreManager.DecreaseScore(doorCost);
                 Debug.Log("Player bought the door!");
                 // Destroy the door GameObject.
                 Destroy(gameObject);

@@ -39,6 +39,8 @@ public void TakeDamage(float damage){
         // Handle death logic here, e.g., destroy the object or trigger a death animation
      }
      if(curr_health == 0){
+        GameData.FinalScore = ScoreManager.Instance.score;
+        Debug.Log("Final Score Before Transition: " + GameData.FinalScore);
         onDeath.Invoke();
      }else{
         onDamage.Invoke();
